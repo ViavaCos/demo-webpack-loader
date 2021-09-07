@@ -9,3 +9,7 @@ module.exports = function(content, map, meta) {
 
     return content
 }
+
+module.exports.pitch = function(){
+    console.log('pitch 222');
+}
