@@ -4,10 +4,21 @@
  *   map 映射关系
  *   meta 元数据
  */
+// 同步loader(写法1)
+// module.exports = function(content, map, meta) {
+//     console.log(111);
+//     return content
+// }
+
+// 同步loader(写法2)
 module.exports = function(content, map, meta) {
     console.log(111);
 
-    return content
+    // 直接调用this中的callback方法，就不需要return了
+    // 第一个参数是错误对象，如果没有错误就传null就行了
+    // 第二、三、四个参数和上面的一样
+    // 一般就传第一、二个参数就行了。 第三、四个参数可以不传
+    this.callback(null, content, map, meta)
 }
 
 /**
