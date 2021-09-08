@@ -13,17 +13,25 @@ module.exports = {
                 // use:['loader1', 'loader2', 'loader3'] // 打印333 222 111
                 
                 // 配置带参数的loader
-                use:[
-                    'loader1',
-                    'loader2',
-                    {
-                        loader: 'loader3',
-                        options: {
-                            name: 'Viavacos'
-                            // name: true // 会报错，因为指定的数据类型为string
-                        }
-                    }
-                ]
+                // use:[
+                //     'loader1',
+                //     'loader2',
+                //     {
+                //         loader: 'loader3',
+                //         options: {
+                //             name: 'Viavacos'
+                //             // name: true // 会报错，因为指定的数据类型为string
+                //         }
+                //     }
+                // ]
+
+                // 手写一个套壳的babel-loader
+                loader: 'babelLoader',
+                options: {
+                    presets: [
+                        '@babel/preset-env'
+                    ]
+                }
             }
         ]
     },

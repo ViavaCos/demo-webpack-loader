@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "presets": {
+            "type": "array",
+            "description": "babel的预设环境"
+        }
+    },
+    "addtionalProperties": true
+}
