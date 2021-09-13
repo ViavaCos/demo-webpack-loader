@@ -1,4 +1,5 @@
 const path = require('path')
+const Plugin1 = require('./plugins/Plugin1')
 
 module.exports = {
     module: {
@@ -41,5 +42,8 @@ module.exports = {
             'node_modules'
         ]
     },
+    plugins: [
+        new Plugin1()
+    ],
     mode: 'development'
 }
